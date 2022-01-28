@@ -107,6 +107,7 @@ public class Main {
 
                     System.out.println("Animal  a Alimentar(posision) y luego el de la comida (posision)");
                     lea.useDelimiter("\\n");
+                    regis.listar();
                     regis.Alimentar(lea.nextInt(),lea.nextInt());
 
 

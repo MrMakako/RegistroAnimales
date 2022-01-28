@@ -22,6 +22,7 @@ public class Registro  {
         for(Animal e: Animales){
 
             System.out.println(counter+"-"+e.getNombreCientifico());
+            counter++;
 
         }
 
@@ -55,6 +56,7 @@ public class Registro  {
 
 
     public void EditAll(String nombre){
+
         for (int i=1; i<7 ;i++){
 
             NumEdit(nombre,i);
