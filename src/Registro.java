@@ -31,6 +31,8 @@ public class Registro  {
 
         }
 
+        System.out.println("Animal existen en la base de datos!!!");
+
         return null;
 
 
@@ -43,7 +45,7 @@ public class Registro  {
         if(check(NombreCientifico,0)==null){
 
             Animales.add(new Animal(NombreCientifico,"","","","",""));
-
+            System.out.println("se registro con exito!!!!!");
             return true;
 
         }
@@ -57,11 +59,15 @@ public class Registro  {
 
     public int option(){
         try{
+
+
             int num= leer.nextInt();
+
             return num;
 
         }catch (Exception e){
             System.out.println("Error Entrada no valida");
+            leer.next();
             return option();
 
         }

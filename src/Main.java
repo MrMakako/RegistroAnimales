@@ -1,3 +1,5 @@
+import jdk.swing.interop.SwingInterOpUtils;
+
 import java.util.Enumeration;
 import java.util.Scanner;
 
@@ -33,11 +35,17 @@ public class Main {
 
             switch(caso){
 
-                case 1:{
+                case 2:{
                     System.out.println("1.Editar una caracteristica"+"\n2.Editar Todas");
                     System.out.print(">>");
                     caso= regis.option();
                     if (caso==1){
+
+
+                        lea.useDelimiter("\\n");
+                        System.out.print("Nombre Cientifico:");
+
+                        System.out.print("----------Elija una opcion para editar-----------");
 
                         System.out.println("1-Nombre Cientifico"
                                 +"\n2-Nombre"
@@ -47,7 +55,7 @@ public class Main {
                                 +"\n6-Descripcion"
 
                         );
-                        lea.useDelimiter("\\n");
+
                         String NombreCientifico= lea.next();
                         System.out.print("Ingrese>>");
                         String Entrada=lea.next();
@@ -59,6 +67,20 @@ public class Main {
                     }
 
 
+
+
+                }
+                case 1:{
+
+                    lea.useDelimiter("\\n");
+
+                    System.out.println("Nombre cientifico del animal:");
+                    String NombreCientifico= lea.next();
+
+
+
+
+                    regis.Add(NombreCientifico);
 
 
                 }
