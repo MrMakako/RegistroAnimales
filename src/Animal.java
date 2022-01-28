@@ -68,12 +68,12 @@ public class Animal {
 
 
     public void print(){
-        System.out.println("Nombre Cientifico:"+getNombreCientifico()+"\n"
-                +"\nNombre:"+getNombreComun()
-                +"\nHabitad:"+getHabitat()
-                +"\nAlimentacion"+Alimentacion
-                +"\nDescrpcion"+Descripcion
-                +"\nGeografia"+Geografia
+        System.out.println("Nombre Cientifico :"+getNombreCientifico()+"\n"
+                +"\nNombre comun : "+getNombreComun()
+                +"\nHabitad: "+getHabitat()
+                +"\nAlimentacion: "+Alimentacion
+                +"\nDescrpcion: "+Descripcion
+                +"\nGeografia: "+Geografia
         );
 
         System.out.println("------------------------");

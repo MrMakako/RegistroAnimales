@@ -46,6 +46,18 @@ public class Registro  {
     }
 
 
+    public void EditAll(String nombre){
+        for (int i=1; i<7 ;i++){
+
+            NumEdit(nombre,i);
+
+        }
+        System.out.println("Guardado!!!!");
+
+
+    }
+
+
     public boolean Add(String NombreCientifico){
 
         if(check(NombreCientifico,0)==null){
@@ -72,8 +84,9 @@ public class Registro  {
             return num;
 
         }catch (Exception e){
-            System.out.println("Error Entrada no valida");
+            System.out.println("Error Entrada no valida intente otra vez");
             leer.next();
+            System.out.print(">>");
             return option();
 
         }
@@ -127,6 +140,8 @@ public class Registro  {
 
             int index=Animales.indexOf(Edit);
 
+            System.out.println();
+
 
             switch (option){
                 case 1:{
@@ -140,7 +155,7 @@ public class Registro  {
 
                     if(check(Entrada,0)!=null){
 
-                        System.out.println("Nombre invalido");
+                        System.out.print("Nombre invalido");
                         break;
 
                     }
@@ -149,7 +164,7 @@ public class Registro  {
 
                     ;break;}
                 case 2:{
-                    System.out.println("Nombre:");
+                    System.out.print("Nombre:");
 
                     Entrada=leer.next();
                     Edit.setNombreComun(Entrada);
@@ -157,25 +172,25 @@ public class Registro  {
 
                     break;}
                 case 3:{
-                    System.out.println("Alimentacion:");
+                    System.out.print("Alimentacion:");
 
                     Entrada=leer.next();
                     Edit.setAlimentacion(Entrada);
                     break;}
                 case 4:{
-                    System.out.println("Habitat:");
+                    System.out.print("Habitat:");
                     Entrada=leer.next();
                     Edit.setHabitat(Entrada);
 
                     break;
                 }
                 case 5:{
-                    System.out.println("Geografia");
+                    System.out.print("Geografia:");
                     Entrada=leer.next();
                     Edit.setGeografia(Entrada);
                     break;}
                 case 6:{
-                    System.out.println("Descripcion");
+                    System.out.print("Descripcion:");
                     Entrada=leer.next();
                     Edit.setDescripcion(Entrada);
 

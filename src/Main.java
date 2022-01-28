@@ -46,10 +46,10 @@ public class Main {
                         System.out.print("Nombre Cientifico:");
                         String NombreCientifico= lea.next();
 
-                        System.out.print("----------Elija una opcion para editar-----------");
+                        System.out.println("----------Elija una opcion para editar-----------");
 
                         System.out.println("1-Nombre Cientifico"
-                                +"\n2-Nombre"
+                                +"\n2-Nombre comun"
                                 +"\n3-Alimentacion"
                                 +"\n4-Habitat"
                                 +"\n5-Geografia"
@@ -65,6 +65,13 @@ public class Main {
                         regis.NumEdit(NombreCientifico, Entrada);
 
 
+                    }else if(caso==2){
+                        System.out.print("Nombre Cientifico:");
+                        lea.useDelimiter("\\n");
+                        System.out.print(">>");
+
+                        regis.EditAll(lea.next());
+
                     }
 
                     break;
@@ -78,6 +85,7 @@ public class Main {
                     lea.useDelimiter("\\n");
 
                     System.out.println("Nombre cientifico del animal:");
+                    System.out.print(">>");
                     String NombreCientifico= lea.next();
 
 
