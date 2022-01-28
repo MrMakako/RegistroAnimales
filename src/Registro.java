@@ -35,7 +35,7 @@ public class Registro  {
         if(sum<Animales.size()){
             if(Animales.get(sum).getNombreCientifico().toLowerCase().equals(NombreCientifico.toLowerCase())){
                 System.out.println("Animal existen en la base de datos!!!");
-                return Animales.get(0);
+                return Animales.get(sum);
 
 
             }
