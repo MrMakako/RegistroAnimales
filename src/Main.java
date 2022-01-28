@@ -105,7 +105,7 @@ public class Main {
                 case 4:{
 
                     System.out.println("---------Ver aniamles---------");
-                    System.out.println("1-Elegir  aniaml"+"\nVerlos todos");
+                    System.out.println("1-Elegir  aniaml"+"\n2-Verlos todos");
 
                     System.out.print(">>");
                     caso= regis.option();

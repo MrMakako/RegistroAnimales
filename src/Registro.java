@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Registro  {
@@ -9,7 +10,7 @@ public class Registro  {
     public Registro(){
         leer=new Scanner(System.in);
 
-        Add("Vaca alpina");
+        Add("vaca alpina");
         Add("Mongosaurio supremo");
         Add("Muercielagus Maustrus");
 
@@ -23,15 +24,18 @@ public class Registro  {
     public Animal check(String NombreCientifico,int sum){
 
         if(sum<Animales.size()){
-            if(Animales.get(sum).getNombreCientifico().equals(NombreCientifico)){
+            if(Animales.get(sum).getNombreCientifico().toLowerCase().equals(NombreCientifico.toLowerCase())){
+                System.out.println("Animal existen en la base de datos!!!");
                 return Animales.get(0);
+
 
             }
             return check(NombreCientifico,sum+1);
 
         }
 
-        System.out.println("Animal existen en la base de datos!!!");
+
+
 
         return null;
 
