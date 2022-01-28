@@ -94,6 +94,10 @@ public class Main {
 
                     System.out.println("-----------Alimentacion-------------");
 
+                    System.out.println("Animal  a Alimentar(Escriba su nombre cientifico) y luego el de la comida (nomrbe cientifico)");
+                    lea.useDelimiter("\\n");
+                    regis.Alimentar(lea.next(),lea.next());
+
 
                     break;
                 }

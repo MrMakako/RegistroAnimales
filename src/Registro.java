@@ -91,6 +91,27 @@ public class Registro  {
     }
 
 
+    public void Alimentar(String Casador,String Presa){
+        Animal a1=check(Casador,0);
+        Animal a2=check(Presa,0);
+
+        if(a1!=null && a2!=null){
+            System.out.println(a1.getNombreCientifico()+" se comio un/a "+a2.getNombreCientifico());
+            Animales.remove(Animales.indexOf(a2));
+
+
+
+
+        }
+
+
+
+
+
+
+
+    }
+
 
 
     public void NumEdit(String NombreCientifico,int option){
@@ -127,25 +148,32 @@ public class Registro  {
                     System.out.println("Nombre:");
 
                     Entrada=leer.next();
+                    Edit.setNombreComun(Entrada);
+
+
                     break;}
                 case 3:{
                     System.out.println("Alimentacion:");
 
                     Entrada=leer.next();
+                    Edit.setAlimentacion(Entrada);
                     break;}
                 case 4:{
                     System.out.println("Habitat:");
                     Entrada=leer.next();
+                    Edit.setHabitat(Entrada);
 
                     break;
                 }
                 case 5:{
                     System.out.println("Geografia");
                     Entrada=leer.next();
+                    Edit.setGeografia(Entrada);
                     break;}
                 case 6:{
                     System.out.println("Descripcion");
                     Entrada=leer.next();
+                    Edit.setDescripcion(Entrada);
 
                     break;
                 }
@@ -153,6 +181,8 @@ public class Registro  {
 
 
             }
+
+            Animales.set(index,Edit);
 
 
 
@@ -164,6 +194,8 @@ public class Registro  {
 
 
         }
+
+
 
 
 
