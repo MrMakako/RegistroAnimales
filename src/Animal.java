@@ -45,4 +45,18 @@ public class Animal {
     public void setNombreComun(String nombreComun) {
         NombreComun = nombreComun;
     }
+
+
+    public String getHabitat() {
+        return Habitat;
+    }
+
+    public void setHabitat(String habitat) {
+        Habitat = habitat;
+    }
+
+
+
+
+
 }
