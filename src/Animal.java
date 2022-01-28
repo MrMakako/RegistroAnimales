@@ -5,6 +5,7 @@ public class Animal {
 
 
 
+
     private String NombreComun,Descripcion,Habitat,Alimentacion,Geografia;
 
     public Animal(){
@@ -24,7 +25,24 @@ public class Animal {
 
     }
 
+    public String getNombreCientifico() {
+        return NombreCientifico;
+    }
+
+    public void setNombreCientifico(String nombreCientifico) {
+        NombreCientifico = nombreCientifico;
+    }
 
 
+    public String getDescripcion() {
+        return Descripcion;
+    }
 
+    public String getNombreComun() {
+        return NombreComun;
+    }
+
+    public void setNombreComun(String nombreComun) {
+        NombreComun = nombreComun;
+    }
 }
