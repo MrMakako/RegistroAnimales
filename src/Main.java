@@ -12,7 +12,10 @@ public class Main {
 
 
 
-    //Nota no se pueden ediar del todo los tres aniamles iniciales por alguna razon los break de otro proceso entran en el ciclo solo con esos tres animales
+
+
+
+    //Error solucionado
     public static void main(String args[]){
 
         Registro regis = new Registro();

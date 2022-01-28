@@ -59,7 +59,13 @@ public class Registro  {
 
         for (int i=1; i<7 ;i++){
 
+
             NumEdit(nombre,i);
+
+
+
+
+
 
 
         }
@@ -145,69 +151,66 @@ public class Registro  {
         if(Edit!=null){
 
             String Entrada;
+
             leer.useDelimiter("\\n");
+
 
             int index=Animales.indexOf(Edit);
 
             System.out.println();
 
 
-            switch (option){
-                case 1:{
-                    System.out.println("NombreCientifico:");
+            if(option==1){
+
+                System.out.print("Descripcion:");
+                Entrada=leer.next();
+                Edit.setDescripcion(Entrada);
+
+            }else if(option==2){
+                System.out.print("Nombre:");
+
+                Entrada=leer.next();
+                Edit.setNombreComun(Entrada);
+
+
+            }
+            else if(option==3){
+                System.out.print("Alimentacion:");
+
+                Entrada=leer.next();
+                Edit.setAlimentacion(Entrada);
+
+            }
+            else if(option==4){
+                System.out.print("Habitat:");
+                Entrada=leer.next();
+                Edit.setHabitat(Entrada);
 
 
 
-                    Entrada=leer.next();
+            }
+            else if(option==5){
+                System.out.print("Geografia:");
+                Entrada=leer.next();
+                Edit.setGeografia(Entrada);
+
+            }
+            else if (option==6){
+
+
+                System.out.println("NombreCientifico:");
 
 
 
-                    if(check(Entrada,0)!=null){
+                Entrada=leer.next();
 
-                        System.out.print("Nombre invalido");
-                        break;
+                if(check(Entrada,0)!=null){
 
-                    }
+                    System.out.print("Nombre invalido");
+
+
+                }else{
                     Edit.setNombreCientifico(Entrada);
-
-                    break;
-
-
-
-                }
-                case 2:{
-                    System.out.print("Nombre:");
-
-                    Entrada=leer.next();
-                    Edit.setNombreComun(Entrada);
-
-
-                    break;}
-                case 3:{
-                    System.out.print("Alimentacion:");
-
-                    Entrada=leer.next();
-                    Edit.setAlimentacion(Entrada);
-                    break;}
-                case 4:{
-                    System.out.print("Habitat:");
-                    Entrada=leer.next();
-                    Edit.setHabitat(Entrada);
-
-                    break;
-                }
-                case 5:{
-                    System.out.print("Geografia:");
-                    Entrada=leer.next();
-                    Edit.setGeografia(Entrada);
-                    break;}
-                case 6:{
-                    System.out.print("Descripcion:");
-                    Entrada=leer.next();
-                    Edit.setDescripcion(Entrada);
-                    break;
-
-
                 }
 
 
@@ -220,13 +223,21 @@ public class Registro  {
 
 
 
-
-
-
-
-
-
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
