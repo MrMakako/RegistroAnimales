@@ -9,6 +9,11 @@ public class Registro  {
     public Registro(){
         leer=new Scanner(System.in);
 
+        Add("Vaca alpina");
+        Add("Mongosaurio supremo");
+        Add("Muercielagus Maustrus");
+
+
 
     }
 
@@ -50,21 +55,20 @@ public class Registro  {
 
     }
 
+    public int option(){
+        try{
+            int num= leer.nextInt();
+            return num;
 
-    public String verify(String NombreCientifico){
-        String nombre="";
-        if(check(NombreCientifico,0)!=null){
-            System.out.println("ingrese otro nombre este esta ocupado!!!!!");
-            return(leer.next());
-
+        }catch (Exception e){
+            System.out.println("Error Entrada no valida");
+            return option();
 
         }
 
-        return nombre;
-
-
-
     }
+
+
 
 
     public void NumEdit(String NombreCientifico,int option,String Entrada){
@@ -110,6 +114,10 @@ public class Registro  {
 
 
         }
+
+
+
+
 
     }
 
