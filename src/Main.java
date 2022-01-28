@@ -1,9 +1,12 @@
 import jdk.swing.interop.SwingInterOpUtils;
 
+import java.lang.reflect.AnnotatedArrayType;
 import java.util.Enumeration;
 import java.util.Scanner;
 
 public class Main {
+
+
 
 
 
@@ -102,9 +105,9 @@ public class Main {
 
                     System.out.println("-----------Alimentacion-------------");
 
-                    System.out.println("Animal  a Alimentar(Escriba su nombre cientifico) y luego el de la comida (nomrbe cientifico)");
+                    System.out.println("Animal  a Alimentar(posision) y luego el de la comida (posision)");
                     lea.useDelimiter("\\n");
-                    regis.Alimentar(lea.next(),lea.next());
+                    regis.Alimentar(lea.nextInt(),lea.nextInt());
 
 
                     break;
@@ -113,7 +116,7 @@ public class Main {
                 case 4:{
 
                     System.out.println("---------Ver aniamles---------");
-                    System.out.println("1-Elegir  aniaml"+"\n2-Verlos todos");
+                    System.out.println("1-Elegir  aniamal"+"\n2-Verlos todos"+"\nOrden de lista");
 
                     System.out.print(">>");
                     caso= regis.option();
@@ -131,6 +134,19 @@ public class Main {
 
                     }else if(caso==2){
                         regis.printAll();
+
+
+                    }else if(caso==3){
+
+
+                        regis.listar();
+
+                        System.out.println();
+                        System.out.println("animal que desea ver :");
+
+                        regis.Animales.get(lea.nextInt()).print();
+
+
 
 
                     }

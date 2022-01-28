@@ -17,7 +17,15 @@ public class Registro  {
 
 
     }
+    public void listar(){
+        int  counter=0;
+        for(Animal e: Animales){
 
+            System.out.println(counter+"-"+e.getNombreCientifico());
+
+        }
+
+    }
 
 
 
@@ -50,6 +58,7 @@ public class Registro  {
         for (int i=1; i<7 ;i++){
 
             NumEdit(nombre,i);
+
 
         }
         System.out.println("Guardado!!!!");
@@ -108,18 +117,16 @@ public class Registro  {
     }
 
 
-    public void Alimentar(String Casador,String Presa){
-        Animal a1=check(Casador,0);
-        Animal a2=check(Presa,0);
+    public void Alimentar(int a1,int a2){
 
-        if(a1!=null && a2!=null){
-            System.out.println(a1.getNombreCientifico()+" se comio un/a "+a2.getNombreCientifico());
-            Animales.remove(Animales.indexOf(a2));
+
+            System.out.println(Animales.get(a1).getNombreCientifico()+" se comio un/a "+Animales.get(a2).getNombreCientifico());
+            Animales.remove(a2);
 
 
 
 
-        }
+
 
 
 
@@ -161,8 +168,11 @@ public class Registro  {
                     }
                     Edit.setNombreCientifico(Entrada);
 
+                    break;
 
-                    ;break;}
+
+
+                }
                 case 2:{
                     System.out.print("Nombre:");
 
@@ -193,9 +203,11 @@ public class Registro  {
                     System.out.print("Descripcion:");
                     Entrada=leer.next();
                     Edit.setDescripcion(Entrada);
-
                     break;
+
+
                 }
+
 
 
 
