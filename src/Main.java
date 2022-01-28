@@ -12,7 +12,7 @@ public class Main {
 
 
 
-
+    //Nota no se pueden ediar del todo los tres aniamles iniciales por alguna razon los break de otro proceso entran en el ciclo solo con esos tres animales
     public static void main(String args[]){
 
         Registro regis = new Registro();
@@ -117,7 +117,7 @@ public class Main {
                 case 4:{
 
                     System.out.println("---------Ver aniamles---------");
-                    System.out.println("1-Elegir  aniamal"+"\n2-Verlos todos"+"\nOrden de lista");
+                    System.out.println("1-Elegir  aniamal"+"\n2-Verlos todos"+"\n3-Orden de lista");
 
                     System.out.print(">>");
                     caso= regis.option();
