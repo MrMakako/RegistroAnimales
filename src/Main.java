@@ -44,6 +44,7 @@ public class Main {
 
                         lea.useDelimiter("\\n");
                         System.out.print("Nombre Cientifico:");
+                        String NombreCientifico= lea.next();
 
                         System.out.print("----------Elija una opcion para editar-----------");
 
@@ -56,15 +57,17 @@ public class Main {
 
                         );
 
-                        String NombreCientifico= lea.next();
+
                         System.out.print("Ingrese>>");
-                        String Entrada=lea.next();
+                        int Entrada=regis.option();
 
 
-                        regis.NumEdit(NombreCientifico, regis.option(),Entrada );
+                        regis.NumEdit(NombreCientifico, Entrada);
 
 
                     }
+
+                    break;
 
 
 
@@ -81,6 +84,48 @@ public class Main {
 
 
                     regis.Add(NombreCientifico);
+
+                    break;
+
+
+                }
+
+                case 3:{
+
+                    System.out.println("-----------Alimentacion-------------");
+
+
+                    break;
+                }
+
+                case 4:{
+
+                    System.out.println("---------Ver aniamles---------");
+                    System.out.println("1-Elegir  aniaml"+"\nVerlos todos");
+
+                    System.out.print(">>");
+                    caso= regis.option();
+
+                    if(caso==1){
+                        System.out.println("Nombre Cientifico:");
+                        lea.useDelimiter("\\n");
+                        Animal mostrar= regis.check(lea.next(),0);
+                        if(mostrar!=null)
+                            mostrar.print();
+
+
+
+
+
+                    }else if(caso==2){
+                        regis.printAll();
+
+
+                    }
+
+                    break;
+
+
 
 
                 }

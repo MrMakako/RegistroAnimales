@@ -33,6 +33,9 @@ public class Animal {
         NombreCientifico = nombreCientifico;
     }
 
+    public void setAlimentacion(String alimentacion) {
+        Alimentacion = alimentacion;
+    }
 
     public String getDescripcion() {
         return Descripcion;
@@ -40,6 +43,14 @@ public class Animal {
 
     public String getNombreComun() {
         return NombreComun;
+    }
+
+    public void setDescripcion(String descripcion) {
+        Descripcion = descripcion;
+    }
+
+    public void setGeografia(String geografia) {
+        Geografia = geografia;
     }
 
     public void setNombreComun(String nombreComun) {
@@ -53,6 +64,24 @@ public class Animal {
 
     public void setHabitat(String habitat) {
         Habitat = habitat;
+    }
+
+
+    public void print(){
+        System.out.println("Nombre Cientifico:"+getNombreCientifico()+"\n"
+                +"\nNombre:"+getNombreComun()
+                +"\nHabitad:"+getHabitat()
+                +"\nAlimentacion"+Alimentacion
+                +"\nDescrpcion"+Descripcion
+                +"\nGeografia"+Geografia
+        );
+
+        System.out.println("------------------------");
+
+
+
+
+
     }
 
 

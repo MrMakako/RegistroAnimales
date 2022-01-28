@@ -37,6 +37,8 @@ public class Registro  {
 
 
 
+
+
     }
 
 
@@ -74,12 +76,29 @@ public class Registro  {
 
     }
 
+    public void printAll(){
+
+        for (Animal a:Animales) {
+            a.print();
+
+        }
 
 
 
-    public void NumEdit(String NombreCientifico,int option,String Entrada){
+
+
+
+    }
+
+
+
+
+    public void NumEdit(String NombreCientifico,int option){
         Animal Edit= check(NombreCientifico,0);
         if(Edit!=null){
+
+            String Entrada;
+            leer.useDelimiter("\\n");
 
             int index=Animales.indexOf(Edit);
 
@@ -87,6 +106,13 @@ public class Registro  {
             switch (option){
                 case 1:{
                     System.out.println("NombreCientifico:");
+
+
+
+                    Entrada=leer.next();
+
+
+
                     if(check(Entrada,0)!=null){
 
                         System.out.println("Nombre invalido");
@@ -99,18 +125,32 @@ public class Registro  {
                     ;break;}
                 case 2:{
                     System.out.println("Nombre:");
+
+                    Entrada=leer.next();
                     break;}
                 case 3:{
                     System.out.println("Alimentacion:");
+
+                    Entrada=leer.next();
                     break;}
                 case 4:{
-                    System.out.println("Habitat:");break;}
-                case 5:{
-                    System.out.println("Geografia");break;}
-                case 6:{
-                    System.out.println("Descripcion");
+                    System.out.println("Habitat:");
+                    Entrada=leer.next();
+
                     break;
                 }
+                case 5:{
+                    System.out.println("Geografia");
+                    Entrada=leer.next();
+                    break;}
+                case 6:{
+                    System.out.println("Descripcion");
+                    Entrada=leer.next();
+
+                    break;
+                }
+
+
 
             }
 
@@ -119,7 +159,13 @@ public class Registro  {
 
 
 
+
+
+
+
         }
+
+
 
 
 
